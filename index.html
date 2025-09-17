@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxury Car Showcase</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.2)), url('http://static.photos/automotive/1200x630/42');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+        .car-shadow {
+            filter: drop-shadow(0 10px 15px rgba(0,0,0,0.3));
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <div id="vanta-bg" class="fixed inset-0 -z-10"></div>
+    
+    <header class="absolute top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-white font-bold text-2xl" data-aos="fade-right">
+                    <span class="text-yellow-400">LUX</span>URY
+                </div>
+                <div class="hidden md:flex space-x-8" data-aos="fade-left">
+                   <a href="/">Home</a>
+<a href="models.html">Models</a>
+<a href="features.html">Features</a>
+<a href="testdrive.html">Test Drive</a>
+<a href="contact.html">Contact</a>
+
+                </div>
+                <button class="md:hidden text-white">
+                    <i data-feather="menu"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-bg min-h-screen flex items-center relative overflow-hidden">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center pt-20 pb-32">
+                <div class="w-full md:w-1/2 text-white" data-aos="fade-right">
+                    <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-4">
+                        Luxury <span class="text-yellow-400">Redefined</span>
+                    </h1>
+                    <p class="text-lg md:text-xl mb-8 opacity-90">
+                        Discover unparalleled sophistication and performance with our exclusive collection of luxury automobiles. Craftsmanship meets innovation.
+                    </p>
+                    <div class="flex space-x-4">
+                        <button class="bg-yellow-500 hover:bg-yellow-600 text-black font-bold py-3 px-6 rounded-full transition transform hover:scale-105">
+                            Explore Models
+                        </button>
+                        <button class="border-2 border-white hover:bg-white hover:text-black text-white font-bold py-3 px-6 rounded-full transition transform hover:scale-105">
+                            Book Test Drive
+                        </button>
+                    </div>
+                    <div class="mt-16 flex items-center space-x-4">
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400">Handcrafted</div>
+                            <div class="text-sm opacity-80">Exclusive Interiors</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400">24/7</div>
+                            <div class="text-sm opacity-80">Concierge Service</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-4xl font-bold text-yellow-400">VIP</div>
+                            <div class="text-sm opacity-80">Ownership Experience</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 mt-16 md:mt-0" data-aos="fade-left">
+                    <div class="car-shadow">
+                        <img src="http://static.photos/automotive/1200x630/10" alt="Luxury Car" class="w-full h-auto rotate-6 transform scale-110">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 scroll-indicator" data-aos="fade-up">
+                <a href="#features" class="text-white block">
+                    <i data-feather="chevron-down" class="w-8 h-8"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out'
+        });
+        feather.replace();
+        
+        // Vanta.js background
+        VANTA.GLOBE({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xffd700,
+            size: 1.00,
+            backgroundColor: 0x0
+        });
+    </script>
+</body>
+</html>
